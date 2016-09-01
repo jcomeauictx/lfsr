@@ -28,7 +28,7 @@ class Polynomial(list):
                     new.pop(0)
             except IndexError:
                 new = []
-            return Poly(new)
+            return Polynomial(new)
 
     def dot(self,S):
         """ This returns the sum of ck*S{N-k} where N+1 = len(S),
@@ -57,4 +57,4 @@ class Polynomial(list):
 
 def dot(x, y):
         """Returns the dot product of two lists."""
-        return reduce(xor, [a&b for (a,b) in zip(x,y)], 0)
+        return reduce(int.__xor__, [a&b for (a,b) in zip(x,y)], 0)

@@ -46,7 +46,7 @@ from polynomial import Polynomial
 X   = Polynomial([1, 0])
 One = Polynomial([1])
 
-def bm(seq):
+def bm(S):
     """Implementation of the Berlekamp-Massey algorithm, the purpose
        of which is to find a LFSR with the smallest possible length
        that generates a given sequence.
